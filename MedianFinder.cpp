@@ -12,8 +12,10 @@ class MedianFinder{
         void addNum(int n){
             maxHeap.push(n);
             minHeap.push(maxHeap.top());
+            maxHeap.pop();
             if(minHeap.size()>maxHeap.size()){
                 maxHeap.push(minHeap.top());
+                minHeap.pop();
             }
         }
         double findMedian(){
