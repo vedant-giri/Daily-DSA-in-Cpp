@@ -80,3 +80,41 @@ int main(){
     cout<<endl;
     return 0;
 }
+
+
+// class Solution {
+//   public:
+//     Node* buildTree(vector<int>& nodes) {
+        
+//         if(nodes.size() == 0 || nodes[0] == -1)
+//             return nullptr;
+        
+//         Node* root = new Node(nodes[0]);
+//         queue<Node*> q;
+//         q.push(root);
+        
+//         int i = 1;
+        
+//         while(!q.empty() && i < nodes.size()) {
+            
+//             Node* curr = q.front();
+//             q.pop();
+            
+//             // Left child
+//             if(i < nodes.size() && nodes[i] != -1) {
+//                 curr->left = new Node(nodes[i]);
+//                 q.push(curr->left);
+//             }
+//             i++;
+            
+//             // Right child
+//             if(i < nodes.size() && nodes[i] != -1) {
+//                 curr->right = new Node(nodes[i]);
+//                 q.push(curr->right);
+//             }
+//             i++;
+//         }
+        
+//         return root;
+//     }
+// };
